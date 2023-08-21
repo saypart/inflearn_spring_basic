@@ -1,9 +1,10 @@
 package inflern.spring.repository;
 
 import inflern.spring.domain.Member;
+import lombok.RequiredArgsConstructor;
 
 import java.util.*;
-
+@RequiredArgsConstructor
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();

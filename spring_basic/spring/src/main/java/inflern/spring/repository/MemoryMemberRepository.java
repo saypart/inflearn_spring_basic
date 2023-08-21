@@ -2,8 +2,10 @@ package inflern.spring.repository;
 
 import inflern.spring.domain.Member;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
+//@Repository
 @RequiredArgsConstructor
 public class MemoryMemberRepository implements MemberRepository{
 

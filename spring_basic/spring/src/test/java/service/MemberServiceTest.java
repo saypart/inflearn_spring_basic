@@ -1,8 +1,8 @@
 package service;
 
 import inflern.spring.domain.Member;
-import inflern.spring.repository.MemberRepository;
 import inflern.spring.repository.MemoryMemberRepository;
+import inflern.spring.service.MemberService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

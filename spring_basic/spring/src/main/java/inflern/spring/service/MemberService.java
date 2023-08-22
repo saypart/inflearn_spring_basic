@@ -5,12 +5,14 @@ import inflern.spring.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 //@RequiredArgsConstructor
 //@Service
+@Transactional //jpa 사용시 트랜잭션필요
 public class MemberService {
 
     private final MemberRepository memberRepository;

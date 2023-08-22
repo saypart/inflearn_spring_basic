@@ -1,58 +1,50 @@
-package service;
+package inflern.spring.service;
 
 import inflern.spring.domain.Member;
+import inflern.spring.repository.MemberRepository;
 import inflern.spring.repository.MemoryMemberRepository;
-import inflern.spring.service.MemberService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
-class MemberServiceTest {
-    //테스트는 한글로 해도 무관
+@SpringBootTest
+@Transactional // TEST시 DB로 롤벡 해줌
+class MemberServiceIntegrationTest {
 
-    MemberService memberService;
-    MemoryMemberRepository memberRepository;
+    @Autowired MemberService memberService;
+    @Autowired MemberRepository memberRepository;
 
-
-//    MemberService memberService = new MemberService();
-//    MemoryMemberRepository memoryMemberRepository = new MemoryMemberRepository();
-    Member member = new Member();
-    Member member1 = new Member();
-    Member member2 = new Member();
     @BeforeEach
     public void BeforeEach(){
-        memberRepository = new MemoryMemberRepository();
-        memberService = new MemberService(memberRepository);
-        member.setName("hello");
-        member1.setName("spring");
-        member2.setName("spring");
     }
-
-    @AfterEach
-    public void afterEach(){
-        memberRepository.clearStore();
-    }
-
 
 
     @Test
     void join() {
         //given
-        /** BeforeEach 로 처리 */
+        Member member =new Member();
+        member.setName("spring");
         //when
-        Long seveId = memberService.join(member);
+        Long saveId = memberService.join(member);
+
         //then
-        Member findMember = memberService.findOne(seveId).get();
+        Member findMember = memberService.findOne(saveId).get();
         assertThat(member.getName()).isEqualTo(findMember.getName());
     }
 
     @Test
     public void 중복_회원_예외(){
         //given
-
+        Member member1 =new Member();
+        member1.setName("spring");
+        Member member2 =new Member();
+        member2.setName("spring");
         //when
         memberService.join(member1);
 //        try {
@@ -82,4 +74,5 @@ class MemberServiceTest {
         //when
         //then
     }
+
 }

@@ -3,7 +3,6 @@ package basic.core;
 import basic.core.member.Grade;
 import basic.core.member.Member;
 import basic.core.service.MemberService;
-import basic.core.service.MemberServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

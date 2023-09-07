@@ -2,9 +2,8 @@ package basic.core.service;
 
 import basic.core.member.Member;
 import basic.core.repository.MemberRepository;
-import basic.core.repository.MemoryMemberRepository;
 
-public class MemberServiceImpl implements MemberService{
+public class MemberServiceImpl implements MemberService {
 
 //    private final MemberRepository memberRepository = new MemoryMemberRepository();
     private final MemberRepository memberRepository;

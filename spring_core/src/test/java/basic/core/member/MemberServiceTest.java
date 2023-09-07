@@ -1,10 +1,9 @@
 package basic.core.member;
 
 import basic.core.AppConfig;
+
+
 import basic.core.service.MemberService;
-import basic.core.service.MemberServiceImpl;
-
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

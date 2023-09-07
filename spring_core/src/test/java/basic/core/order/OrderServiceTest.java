@@ -4,12 +4,9 @@ import basic.core.AppConfig;
 import basic.core.member.Grade;
 import basic.core.member.Member;
 import basic.core.service.MemberService;
-import basic.core.service.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class OrderServiceTest {
 

@@ -1,7 +1,6 @@
 package basic.core;
 
 import basic.core.discount.DiscountPolicy;
-import basic.core.discount.FixDiscountPolicy;
 import basic.core.discount.RateDiscountPolicy;
 import basic.core.order.OrderService;
 import basic.core.order.OrderServiceImpl;

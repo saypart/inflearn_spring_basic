@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="093229b3-c823-47d9-9714-c54f4d677f7c" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/../spring_core/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_core/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_core/src/main/java/basic/core/common/MyLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_core/src/main/java/basic/core/web/LogDemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_core/src/main/java/basic/core/web/LogDemoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_core/src/test/java/basic/core/scope/PrototypeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_core/src/test/java/basic/core/scope/SingletonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_core/src/test/java/basic/core/scope/SingletonWithPrototypeTest1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_core/src/test/java/basic/core/lifecycle/BeanLifeCycleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_core/src/test/java/basic/core/lifecycle/BeanLifeCycleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_core/src/test/java/basic/core/lifecycle/NetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_core/src/test/java/basic/core/lifecycle/NetworkClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

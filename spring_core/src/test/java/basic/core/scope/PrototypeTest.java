@@ -8,31 +8,38 @@ import org.springframework.context.annotation.Scope;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SingletonTest {
+public class PrototypeTest {
 
     @Test
-    void singletonBeanFind(){
-        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SingletonBean.class);
+    void PrototypeBeanFind(){
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeBean.class);
 
-        SingletonBean singletonBean1 = ac.getBean(SingletonBean.class);
-        SingletonBean singletonBean2 = ac.getBean(SingletonBean.class);
-        System.out.println("singletonBean1 = "+singletonBean1);
-        System.out.println("singletonBean2 = "+singletonBean2);
+        System.out.println("find prototypeBean1");
+        PrototypeBean prototypeBean1 =  ac.getBean(PrototypeBean.class);
+        System.out.println("find prototypeBean2");
+        PrototypeBean prototypeBean2 =  ac.getBean(PrototypeBean.class);
+        System.out.println("prototypeBean1 = "+ prototypeBean1);
+        System.out.println("prototypeBean2 = "+ prototypeBean2);
 
-        assertThat(singletonBean1).isSameAs(singletonBean2);
+
+        /** 종료 하기 위해선 직접 호출이 필요
+        prototypeBean1.destroy();
+        prototypeBean2.destroy();
+         */
+        assertThat(prototypeBean1).isNotSameAs(prototypeBean2);
         ac.close();
     }
 
-    @Scope("singleton")
-    static class SingletonBean {
+    @Scope("prototype")
+    static class PrototypeBean {
         @PostConstruct
         public void init() {
-            System.out.println("SingletonBean.init");
+            System.out.println("PrototypeBean.init");
         }
 
-        @PreDestroy
+        @PreDestroy  // PrototypeBean 이기 때문에 실행 안됨
         public void destroy(){
-            System.out.println("SingletonBean.destroy");
+            System.out.println("PrototypeBean.destroy");
         }
     }
 }

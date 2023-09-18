@@ -77,3 +77,13 @@
    - HTTP 메서드 - GET, POST
    - HTTP 메서드 - PUT, PATCH, DELETE
    - HTTP 메서드의 속성
+5. HTTP 메서드 활용
+   - 클라이언트에서 서버로 데이터 전송
+   - HTTP API 설계 예시
+6. HTTP상태코드
+   - HTTP 상태코드 소개
+   - 2xx  - 성공
+   - 3xx - 리다이렉션1
+   - 3xx - 리다이렉션2
+   - 4xx - 클라이언트 오류, 5xx - 서버오류
+7. 
